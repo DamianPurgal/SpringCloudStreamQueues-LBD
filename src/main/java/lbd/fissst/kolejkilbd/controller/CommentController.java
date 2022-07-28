@@ -1,7 +1,7 @@
 package lbd.fissst.kolejkilbd.controller;
 
 import lbd.fissst.kolejkilbd.DTO.CommentDTO;
-import lbd.fissst.kolejkilbd.message_broker.type.MessageType;
+import lbd.fissst.kolejkilbd.messageBroker.MessageType;
 import lombok.AllArgsConstructor;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.web.bind.annotation.*;
