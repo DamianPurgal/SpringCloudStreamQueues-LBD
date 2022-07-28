@@ -1,7 +1,7 @@
 package lbd.fissst.kolejkilbd.controller;
 
 import lbd.fissst.kolejkilbd.DTO.UserDTO;
-import lbd.fissst.kolejkilbd.message_broker.type.MessageType;
+import lbd.fissst.kolejkilbd.messageBroker.MessageType;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.function.StreamBridge;
@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class UserController {
 
-    @Autowired
     private StreamBridge streamBridge;
 
     @PostMapping

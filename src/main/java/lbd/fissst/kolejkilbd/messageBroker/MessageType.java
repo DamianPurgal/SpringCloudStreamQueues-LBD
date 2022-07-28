@@ -1,4 +1,4 @@
-package lbd.fissst.kolejkilbd.message_broker.type;
+package lbd.fissst.kolejkilbd.messageBroker;
 
 public enum MessageType {
     USER_CREATED,

@@ -2,9 +2,8 @@ package lbd.fissst.kolejkilbd.controller;
 
 
 import lbd.fissst.kolejkilbd.DTO.ArticleDTO;
-import lbd.fissst.kolejkilbd.message_broker.type.MessageType;
+import lbd.fissst.kolejkilbd.messageBroker.MessageType;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/article")
 public class ArticleController {
 
-    @Autowired
     private StreamBridge streamBridge;
 
     @PostMapping
