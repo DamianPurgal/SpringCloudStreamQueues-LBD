@@ -21,7 +21,7 @@ public class UserController {
     @PostMapping
     public String createUser(@RequestBody UserDTO userDTO){
 
-        streamBridge.send("userCreated-out-0", MessageType.USER_CREATED);
+        streamBridge.send("user-out-0", MessageType.USER_CREATED);
 
         return "User created";
     }

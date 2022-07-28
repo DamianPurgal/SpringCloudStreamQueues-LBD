@@ -15,7 +15,7 @@ public class CommentController {
 
     @PostMapping
     public String createAComment(@RequestBody CommentDTO commentDTO){
-        streamBridge.send("commentCreated-out-0", MessageType.COMMENT_CREATED);
+        streamBridge.send("comment-out-0", MessageType.COMMENT_CREATED);
         return "Comment created";
     }
 
@@ -24,7 +24,7 @@ public class CommentController {
             @PathVariable("commentId") Long commentId,
             @RequestBody CommentDTO commentDTO
     ){
-        streamBridge.send("commentUpdated-out-0", MessageType.COMMENT_UPDATED);
+        streamBridge.send("comment-out-0", MessageType.COMMENT_UPDATED);
         return "Comment updated";
     }
 

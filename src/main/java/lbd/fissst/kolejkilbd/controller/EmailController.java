@@ -18,7 +18,7 @@ public class EmailController {
 
     @PostMapping
     public String createAComment(@RequestBody CommentDTO commentDTO){
-        streamBridge.send("emailSend-out-0", MessageType.EMAIL_SEND);
+        streamBridge.send("email-out-0", MessageType.EMAIL_SEND);
         return "Email created";
     }
 

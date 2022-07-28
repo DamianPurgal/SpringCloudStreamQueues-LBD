@@ -18,7 +18,7 @@ public class ArticleController {
 
     @PostMapping
     public String createArticle(@RequestBody ArticleDTO articleDTO){
-        streamBridge.send("articleCreated-out-0", MessageType.ARTICLE_CREATED);
+        streamBridge.send("article-out-0", MessageType.ARTICLE_CREATED);
         return "Article created";
     }
 
@@ -27,7 +27,7 @@ public class ArticleController {
             @PathVariable("articleId") Long articleId,
             @RequestBody ArticleDTO articleDTO
     ){
-        streamBridge.send("articleUpdated-out-0", MessageType.ARTICLE_UPDATED);
+        streamBridge.send("article-out-0", MessageType.ARTICLE_UPDATED);
         return "Article updated";
     }
 }
