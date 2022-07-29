@@ -11,14 +11,29 @@ public class Consumers {
     @Bean
     public Consumer<MessageType> emailSendConsumer() {
         return email -> {
-            System.out.println("email: " + email);
+            throw new RuntimeException();
+        };
+    }
+
+    //Throws exception to pass message to DLQ
+    @Bean
+    public Consumer<MessageType> createdEventConsumer() {
+        return event -> {
+            throw new RuntimeException();
         };
     }
 
     @Bean
-    public Consumer<MessageType> createdEventConsumer() {
+    public Consumer<MessageType> dlqCreatedEventConsumer() {
         return event -> {
-            System.out.println("event: " + event);
+            System.out.println("DLQ EVENT CONSUMER " + event);
+        };
+    }
+
+    @Bean
+    public Consumer<MessageType> dlqEmailSendConsumer() {
+        return event -> {
+            System.out.println("DLQ EMAIL CONSUMER " + event);
         };
     }
 
